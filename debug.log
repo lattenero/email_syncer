@@ -1,0 +1,120 @@
+=== DIRECT TEST WRITE at 2025-05-31 15:50:12 +0200 ===
+=== EmailSyncer Log Started at 2025-05-31 15:50:12 +0200 ===
+[2025-05-31 15:50:12] INFO: Ruby version: 3.2.1
+[2025-05-31 15:50:12] INFO: Command: email_syncer.rb 
+[2025-05-31 15:50:12] INFO: Log file test successful!
+[2025-05-31 15:50:12] INFO: Starting mailbox connection process...
+[2025-05-31 15:50:12] INFO: Detecting IMAP configuration for info@avno.it on smail.mycloudster.com
+[2025-05-31 15:50:12] WARN: ⚠️  SSL certificate verification disabled
+[2025-05-31 15:50:12] INFO: Testing 8 different IMAP configurations...
+[2025-05-31 15:50:12] INFO: 1/8 - Trying connection on port 993 (SSL: enabled (certificate not verified))
+[2025-05-31 15:50:12] INFO: ✓ TCP connection successful on port 993
+[2025-05-31 15:50:12] INFO: Attempting standard LOGIN with full email: info@avno.it
+[2025-05-31 15:50:12] INFO: ✓ Login successful with full email (method: login)
+[2025-05-31 15:50:12] INFO: ✓ Configuration found: port 993, SSL: enabled (certificate not verified)
+[2025-05-31 15:50:12] INFO: ✓ Connected to source mailbox: info@avno.it
+[2025-05-31 15:50:12] INFO: Detecting IMAP configuration for info@avno.it on 151.80.251.91
+[2025-05-31 15:50:12] WARN: ⚠️  SSL certificate verification disabled
+[2025-05-31 15:50:12] INFO: Utilizzando configurazione ottimizzata per server mail.lattenero.it
+[2025-05-31 15:50:12] INFO: Testing 4 different IMAP configurations...
+[2025-05-31 15:50:12] INFO: 1/4 - Trying connection on port 993 (SSL: enabled (certificate not verified))
+[2025-05-31 15:50:12] INFO: ✓ TCP connection successful on port 993
+[2025-05-31 15:50:12] INFO: Mail.lattenero.it: trying with username only first: info
+[2025-05-31 15:50:12] INFO: Trying username variant: info
+[2025-05-31 15:50:12] INFO: Attempting standard LOGIN with: info
+[2025-05-31 15:50:22] WARN: ✗ Login with info failed: LOGIN failed
+[2025-05-31 15:50:22] INFO: Trying username variant: info@avno.it
+[2025-05-31 15:50:22] INFO: Attempting standard LOGIN with: info@avno.it
+[2025-05-31 15:50:22] WARN: ✗ Login with info@avno.it failed: closed stream
+[2025-05-31 15:50:22] INFO: Trying username variant: info%avno.it
+[2025-05-31 15:50:22] INFO: Attempting standard LOGIN with: info%avno.it
+[2025-05-31 15:50:22] WARN: ✗ Login with info%avno.it failed: closed stream
+[2025-05-31 15:50:22] INFO: Attempting standard LOGIN with full email: info@avno.it
+[2025-05-31 15:50:22] WARN: ✗ Unexpected error with login: IOError - closed stream
+[2025-05-31 15:50:22] INFO: Attempting standard LOGIN with username: info
+[2025-05-31 15:50:22] WARN: ✗ Unexpected error with login: IOError - closed stream
+[2025-05-31 15:50:22] WARN: ✗ Generic error on port 993: NoMethodError - undefined method `data' for "All authentication methods failed":String
+[2025-05-31 15:50:22] WARN:    Backtrace: /home/raoul/.rbenv/versions/3.2.1/lib/ruby/gems/3.2.0/gems/net-imap-0.5.8/lib/net/imap/errors.rb:67:in `initialize', email_syncer.rb:289:in `new', email_syncer.rb:289:in `block in detect_imap_config'
+[2025-05-31 15:50:22] INFO: 2/4 - Trying connection on port 993 (SSL: enabled (certificate not verified))
+[2025-05-31 15:50:23] INFO: ✓ TCP connection successful on port 993
+[2025-05-31 15:50:23] INFO: Mail.lattenero.it: trying with username only first: info
+[2025-05-31 15:50:23] INFO: Trying username variant: info
+[2025-05-31 15:50:23] INFO: Attempting AUTHENTICATE PLAIN with: info
+[2025-05-31 15:50:33] WARN: ✗ Login with info failed: AUTHENTICATE failed
+[2025-05-31 15:50:33] INFO: Trying username variant: info@avno.it
+[2025-05-31 15:50:33] INFO: Attempting AUTHENTICATE PLAIN with: info@avno.it
+[2025-05-31 15:50:33] WARN: ✗ Login with info@avno.it failed: closed stream
+[2025-05-31 15:50:33] INFO: Trying username variant: info%avno.it
+[2025-05-31 15:50:33] INFO: Attempting AUTHENTICATE PLAIN with: info%avno.it
+[2025-05-31 15:50:33] WARN: ✗ Login with info%avno.it failed: closed stream
+[2025-05-31 15:50:33] INFO: Attempting AUTHENTICATE PLAIN with full email: info@avno.it
+[2025-05-31 15:50:33] WARN: ✗ Unexpected error with plain: IOError - closed stream
+[2025-05-31 15:50:33] INFO: Attempting AUTHENTICATE PLAIN with username: info
+[2025-05-31 15:50:33] WARN: ✗ Unexpected error with plain: IOError - closed stream
+[2025-05-31 15:50:33] WARN: ✗ Generic error on port 993: NoMethodError - undefined method `data' for "All authentication methods failed":String
+[2025-05-31 15:50:33] WARN:    Backtrace: /home/raoul/.rbenv/versions/3.2.1/lib/ruby/gems/3.2.0/gems/net-imap-0.5.8/lib/net/imap/errors.rb:67:in `initialize', email_syncer.rb:289:in `new', email_syncer.rb:289:in `block in detect_imap_config'
+[2025-05-31 15:50:33] INFO: 3/4 - Trying connection on port 993 (SSL: enabled)
+[2025-05-31 15:50:33] WARN: ✗ SSL error on port 993: SSL_connect returned=1 errno=0 peeraddr=151.80.251.91:993 state=error: certificate verify failed (Hostname mismatch)
+[2025-05-31 15:50:33] WARN:    Problem with SSL certificate or encryption configuration
+[2025-05-31 15:50:33] INFO: 4/4 - Trying connection on port 993 (SSL: enabled (certificate not verified))
+[2025-05-31 15:50:33] INFO: ✓ TCP connection successful on port 993
+[2025-05-31 15:50:33] INFO: Mail.lattenero.it: trying with username only first: info
+[2025-05-31 15:50:33] INFO: Trying username variant: info
+[2025-05-31 15:50:33] INFO: Attempting standard LOGIN with: info
+[2025-05-31 15:50:43] WARN: ✗ Login with info failed: LOGIN failed
+[2025-05-31 15:50:43] INFO: Attempting AUTHENTICATE PLAIN with: info
+[2025-05-31 15:50:43] WARN: ✗ Login with info failed: closed stream
+[2025-05-31 15:50:43] INFO: Trying username variant: info@avno.it
+[2025-05-31 15:50:43] INFO: Attempting standard LOGIN with: info@avno.it
+[2025-05-31 15:50:43] WARN: ✗ Login with info@avno.it failed: closed stream
+[2025-05-31 15:50:43] INFO: Attempting AUTHENTICATE PLAIN with: info@avno.it
+[2025-05-31 15:50:43] WARN: ✗ Login with info@avno.it failed: closed stream
+[2025-05-31 15:50:43] INFO: Trying username variant: info%avno.it
+[2025-05-31 15:50:43] INFO: Attempting standard LOGIN with: info%avno.it
+[2025-05-31 15:50:43] WARN: ✗ Login with info%avno.it failed: closed stream
+[2025-05-31 15:50:43] INFO: Attempting AUTHENTICATE PLAIN with: info%avno.it
+[2025-05-31 15:50:43] WARN: ✗ Login with info%avno.it failed: closed stream
+[2025-05-31 15:50:43] INFO: Attempting standard LOGIN with full email: info@avno.it
+[2025-05-31 15:50:43] WARN: ✗ Unexpected error with login: IOError - closed stream
+[2025-05-31 15:50:43] INFO: Attempting AUTHENTICATE PLAIN with full email: info@avno.it
+[2025-05-31 15:50:43] WARN: ✗ Unexpected error with authenticate_plain: IOError - closed stream
+[2025-05-31 15:50:43] INFO: Attempting standard LOGIN with username: info
+[2025-05-31 15:50:43] WARN: ✗ Unexpected error with login: IOError - closed stream
+[2025-05-31 15:50:43] INFO: Attempting AUTHENTICATE PLAIN with username: info
+[2025-05-31 15:50:43] WARN: ✗ Unexpected error with authenticate_plain: IOError - closed stream
+[2025-05-31 15:50:43] WARN: ✗ Generic error on port 993: NoMethodError - undefined method `data' for "All authentication methods failed":String
+[2025-05-31 15:50:43] WARN:    Backtrace: /home/raoul/.rbenv/versions/3.2.1/lib/ruby/gems/3.2.0/gems/net-imap-0.5.8/lib/net/imap/errors.rb:67:in `initialize', email_syncer.rb:289:in `new', email_syncer.rb:289:in `block in detect_imap_config'
+[2025-05-31 15:50:43] ERROR: ============================================================
+[2025-05-31 15:50:43] ERROR: DIAGNOSTICS: All connection attempts failed for info@avno.it
+[2025-05-31 15:50:43] ERROR: Host tested: 151.80.251.91
+[2025-05-31 15:50:43] ERROR: IP address: 151.80.251.91
+[2025-05-31 15:50:43] ERROR: SSL verification: DISABLED
+[2025-05-31 15:50:43] ERROR: LATTENERO SPECIFICS:
+[2025-05-31 15:50:43] ERROR: - Questo server potrebbe richiedere autenticazione con solo username (senza @lattenero.it)
+[2025-05-31 15:50:43] ERROR: - Potrebbe anche richiedere un prefisso per lo username o una password app specifica
+[2025-05-31 15:50:43] ERROR: - Per account specifici, potrebbe essere necessario abilitare IMAP nelle impostazioni account
+[2025-05-31 15:50:44] ERROR: Port 143 open: Yes (banner: * OK IMAP4rev1 proxy server ready)
+[2025-05-31 15:51:44] ERROR: Port 993 open: Yes (no banner)
+[2025-05-31 15:53:53] ERROR: Port 587 closed or filtered: connect(2)
+[2025-05-31 15:58:54] ERROR: Port 465 open: Yes (no banner)
+[2025-05-31 15:58:54] ERROR: Port 25 open: Yes (banner: 220-mail.lattenero.it ESMTP Postfix)
+[2025-05-31 15:58:54] ERROR: Port 110 open: Yes (banner: +OK POP3 ready)
+[2025-05-31 15:58:54] ERROR: ============================================================
+[2025-05-31 15:58:54] ERROR: POSSIBLE CAUSES:
+[2025-05-31 15:58:54] ERROR: 1. 🔐 CREDENTIALS: Wrong email or password
+[2025-05-31 15:58:54] ERROR: 2. 🏠 HOST: 151.80.251.91 might not be the correct IMAP server
+[2025-05-31 15:58:54] ERROR: 3. 🔒 SECURITY: Might need an 'app password'
+[2025-05-31 15:58:54] ERROR: 4. ⚙️  CONFIGURATION: IMAP access might be disabled
+[2025-05-31 15:58:54] ERROR: 5. 🛡️  FIREWALL: Ports blocked by firewall or provider
+[2025-05-31 15:58:54] ERROR: 6. 🔐 SSL: SSL certificate issues
+[2025-05-31 15:58:54] ERROR: ============================================================
+[2025-05-31 15:58:54] ERROR: SUGGESTIONS:
+[2025-05-31 15:58:54] ERROR: - Verify credentials in email client
+[2025-05-31 15:58:54] ERROR: - Check if you need to enable 'Less secure app access'
+[2025-05-31 15:58:54] ERROR: - Try with an app password if using 2FA
+[2025-05-31 15:58:54] ERROR: - Verify that IMAP is enabled in the account
+[2025-05-31 15:58:54] ERROR: - Try with IP address instead of hostname
+[2025-05-31 15:58:54] ERROR: ============================================================
+[2025-05-31 15:58:54] ERROR: ❌ Failed to connect to destination mailbox: info@avno.it
+[2025-05-31 15:58:54] ERROR: Sync operation failed due to connection errors
+[2025-05-31 15:58:54] INFO: === EmailSyncer Log Ended at 2025-05-31 15:58:54 +0200 ===

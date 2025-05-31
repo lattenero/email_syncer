@@ -1,0 +1,30 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    date (3.4.1)
+    fileutils (1.7.3)
+    json (2.12.2)
+    logger (1.7.0)
+    net-imap (0.5.8)
+      date
+      net-protocol
+    net-protocol (0.2.2)
+      timeout
+    optparse (0.6.0)
+    timeout (0.4.3)
+    zlib (3.2.1)
+
+PLATFORMS
+  ruby
+  x86_64-linux
+
+DEPENDENCIES
+  fileutils
+  json
+  logger
+  net-imap
+  optparse
+  zlib
+
+BUNDLED WITH
+   2.6.9
